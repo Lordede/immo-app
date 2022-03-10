@@ -1,5 +1,5 @@
-import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { HousingService } from 'src/app/services/housing.service';
 
 @Component({
   selector: 'app-property-list',
@@ -8,12 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyListComponent implements OnInit {
 
-  properties!: Array<any>;
+  properties!: any;
 
-  constructor(private http:HttpClientModule) { }
+  constructor(private housingService: HousingService) { }
 
   ngOnInit(): void {
-
+    this.housingService.getAllProperties().subscribe( //get gibt Oberservable zurück, welches immer per subscribe genutzt werden muss!
+      data => {
+        this.properties = data;
+        console.log(data)
+      }, error => {
+        console.log(error);
+      }
+    );
   }
 
 }
