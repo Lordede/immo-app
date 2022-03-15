@@ -1,32 +1,49 @@
 [
   {
-  "Id": 1,
-  "Name": "Birla House",
-  "Type": "House",
-  "Price": 12000
+    "Id": 1,
+    "SellRent": 2,
+    "Name": "Birla House",
+    "Type": "House",
+    "Price": 12000,
+    "Image": "prop-1"
   },
   {
-  "Id": 2,
-  "Name": "Bumbsvilla",
-  "Type": "Villa",
-  "Price": 13000
+    "Id": 2,
+    "SellRent": 2,
+    "Name": "Bumbsvilla",
+    "Type": "Villa",
+    "Price": 13000,
+    "Image": "prop-2"
   },
   {
-  "Id": 3,
-  "Name": "Drecksloch",
-  "Type": "Flat",
-  "Price": 14500
+    "Id": 3,
+    "SellRent": 1,
+    "Name": "Drachenschanze",
+    "Type": "Flat",
+    "Price": 14500,
+    "Image": "prop-3"
   },
   {
-  "Id": 4,
-  "Name": "Spielwiese",
-  "Type": "House",
-  "Price": 16000
+    "Id": 4,
+    "SellRent": 1,
+    "Name": "Spielwiese",
+    "Type": "House",
+    "Price": 16000,
+    "Image": "prop-4"
   },
   {
-  "Id": 5,
-  "Name": "Shithole",
-  "Type": "Flat",
-  "Price": 18000
+    "Id": 5,
+    "SellRent": 1,
+    "Name": "Shithole",
+    "Type": "Flat",
+    "Price": 18000,
+    "Image": "prop-5"
+  },
+  {
+    "Id": 6,
+    "SellRent": 1,
+    "Name": "The Cube",
+    "Type": "Flat",
+    "Price": 19000
   }
 ]

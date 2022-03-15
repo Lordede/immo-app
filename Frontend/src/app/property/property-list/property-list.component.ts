@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HousingService } from 'src/app/services/housing.service';
 import { IProperty } from '../IProperty.interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-property-list',
@@ -9,12 +10,17 @@ import { IProperty } from '../IProperty.interface';
 })
 export class PropertyListComponent implements OnInit {
 
-  properties!: Array<IProperty>;
+  SellRent = 1; //default Wert
+  properties!: IProperty[];
 
-  constructor(private housingService: HousingService) { }
+  constructor(private route: ActivatedRoute, private housingService: HousingService) { }
 
   ngOnInit(): void {
-    this.housingService.getAllProperties().subscribe( //get gibt Oberservable zurück, welches immer per subscribe genutzt werden muss!
+    if(this.route.snapshot.url.toString()){
+      this.SellRent = 2; // Meint, dasss wir auf rent-property URL sind sonst auf Base-URL
+    }
+
+    this.housingService.getAllProperties(this.SellRent).subscribe( //get gibt Oberservable zurück, welches immer per subscribe genutzt werden muss!
       data => {
         this.properties = data;
         console.log(data)
