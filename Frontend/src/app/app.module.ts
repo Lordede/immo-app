@@ -10,13 +10,17 @@ import { HousingService } from './services/housing.service';
 import { AddPropertyComponent } from './property/add-property/add-property.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 const appRoutes: Routes = [
   {path: "add-property", component: AddPropertyComponent},
   {path: "", component: PropertyListComponent}, //leerer string leitet zu localhost:xxxx
   {path: "rent-property", component: PropertyListComponent},
   {path: "property-detail/:id", component: PropertyDetailComponent},
+  {path: "user/login", component: UserLoginComponent},
+  {path: "user/register", component: UserRegisterComponent},
   {path: "**", component: PropertyListComponent}, // wenn falscher URL eingegeben wurde / kann man zb. eigene 404 seite machen
 ]
 
@@ -28,12 +32,15 @@ const appRoutes: Routes = [
     AddPropertyComponent,
     NavBarComponent,
     PropertyDetailComponent,
+    UserRegisterComponent,
+    UserLoginComponent,
    ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     HousingService

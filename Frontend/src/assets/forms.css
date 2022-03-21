@@ -1,0 +1,11 @@
+/* globale css config hier muss bei styles.css importiert werden, damit angewandt */
+
+.ng-invalid.ng-touched{
+  border-color: red;
+}
+/* ng-invaild wird von Angular als Klasse hinzugefügt, da Feld required aber nicht ausgefüllt
+  ng-touched nur wenn schon angeklickt
+  -> sprich wenn required und schon mal angeklickt wird feld rot, da leer */
+.error-block{
+  color: red;
+}
