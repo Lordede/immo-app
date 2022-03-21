@@ -13,6 +13,11 @@ export class AddPropertyComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    // this.addPropertyForm.controls['Name'].setValue('Default Value');
+
+    setTimeout(() => {// Template Form Ansatz arbeitet synchron, daher muss hier gewartet werden bis fertig geladet, dann wird wert gesetzt
+    this.addPropertyForm.controls['Name'].setValue('Default Value') // Funktioniert nur weil Komponente klein, sonst müsste länger gewartet werden
+    }, /*1000*/); // bei größeren Komponenten Timeout verlängern, damit es auch wirklich fertig geladet ist
   }
 
   onBack(){
