@@ -9,3 +9,9 @@
 .error-block{
   color: red;
 }
+
+.btn-group > label[ng-reflect-btn-radio]{ /* wird leider nicht angewendet bei Sell/Rent Add-Property*/
+  border-radius: 44px;
+  padding: 0 15px;
+  line-height: 30px;
+}
