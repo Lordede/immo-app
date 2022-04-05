@@ -4,3 +4,4 @@
 @import url('../node_modules/alertifyjs/build/css/themes/bootstrap.min.css');
 @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 @import url("../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css");
+@import url("assets/tabs.css");
